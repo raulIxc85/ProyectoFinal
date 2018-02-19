@@ -5,12 +5,25 @@ function Validar(){
     const preciobase=250;
     comision=preciobase*0.30:
     var nomb = document.frmDatos.nombre.value;
+    var dia=document.frmDatos.DiaNacimiento.value;
+    var mes=document.frmDatos.MesNacimiento.value;
     var anio=document.frmDatos.ANacimeinto.value;
 
-    if(nomb.value.length==0){
+    if(nomb.value==null){
         alert("Ingrese Nombre completo");
         return false;
+    }if(dia.value==null){
+        alert("Ingrese Dia de Nacimiento");
+        return false;
+    }if(mes.value==null){
+        alert("Ingrese Mes de Nacimiento");
+        return false;
+    }if(anio.value==null){
+        alert("Ingrese Año de Nacimiento");
+        return false;
     }
+
+
     edad=AnioActual-anio;
 //evaluar recargos par la edad del cliente
     if (edad<18){
@@ -60,7 +73,11 @@ function Validar(){
     }
 
 
-    totalPagar=preciobase+comision+recargo;
-    document.write("El total a pagar es:"+totalPagar);
+    totalPagar=comision+recargo+recargoCony+recargoHijo;
+    document.write("Nombre cliente: " + nomb);
+    document.write("Recargo por edad: " +recargo);
+    document.write("Recargo por Conyugue: "+recargoCony);
+    document.write("Recargo por hijos: "+ recargoHijo);
+    document.write("El total a pagar: " +totalPagar);
     return true;
 }
