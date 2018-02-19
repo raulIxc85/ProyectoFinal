@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Cotizador Seguros TK-U</title>
+    <script src="js/cotizar.js"></script>
+</head>
+<body>
+ <form action="" name="frmDatos" method="get" onsubmit="return Validar()">
+       <fieldset>
+            <legend>Ingrese los siguientes datos</legend>
+            <table>
+            <tr>
+                <td><label for="nombre">Nombre Completo:</label></td>
+                <td><input type="text" name="nombre" placeholder="Ingrese Nombres y Apellidos" size="40"></td>
+            </tr>
+            <tr>
+                <td><label for="DiaNacimiento">Dia de nacimiento:</label></td>
+                <td><input type="number" name="DiaNacimiento"  min="1" max="31" maxlength="2"></td>
+                <td><p>Ejemplo: Si nacio el 22 de enero, ingrese solamente 22</p></td>
+            </tr>
+            <tr>
+                <td><label for="MesNacimiento">Mes de nacimiento:</label></td>
+                <td><input type="number" name="MesNacimiento" min="1" max="12" maxlength="2"></td>
+                <td><p>Ejemplo: Si nacio en el mes de enero, ingrese solamente 1</p></td>
+            </tr>
+            <tr>
+                <td><label for="ANacimiento">Año de nacimiento:</label></td>
+                <td><input type="text" name="ANacimiento" placeholder="1980" maxlength="4" size="6"></td>
+                <td><p>Ejemplo: Si nacio el 22 de enero de 1980, ingresar solamente 1980</p></td>
+            </tr>
+            <tr>
+                <td><label for="conyugue">Tiene Conyugue:</label></td>
+                <td><input type="radio" id="conyugue" name="conyugue" value"Si">Si
+                    <input type="radio" name="conyugue" value"No">No
+                </td>
+            </tr>
+            <tr>
+              <td><label for="edadconyugue">Edad Conyugue:</label></td>
+              <td><input type="number" name="edadConyugue" min="18" max="99" size="5"></td>
+            </tr>
+            <tr>
+                <td><label for="hijos">Tiene Hijos:</label></td>
+                <td><input type="radio" id="hijos" name="hijos" value"Si">Si
+                    <input type="radio" name="hijos" value"No">No
+                </td>
+            </tr>
+            <tr>
+                <td><label for="cantHijos">Cantidad de hijos:</label></td>
+                <td><input type="number" name="cantHijos" id="cantHijos" min="1" max="20"></td>
+            </tr>
+          </table>
+      </fieldset>
+      <input type="submit" value="Generar Cotizacion">
+      <input type="reset" value="Borrar">
+</form>
+
+</body>
+</html>
